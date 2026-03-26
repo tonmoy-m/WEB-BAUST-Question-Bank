@@ -4,6 +4,9 @@ A frontend utility application designed to solve a specific problem for the stud
 
 This repository houses the **Minimum Viable Product (MVP)** developed to rapidly prototype the user interface and resource routing logic. 
 
+**🚀 [Click here to view the Live Demo!](https://tonmoy-m.github.io/WEB-BAUST-Question-Bank/)**
+
+
 ## 🎓 Academic Background
 
 This project was developed collaboratively as part of a foundational software engineering course. The primary focus was on the Software Development Life Cycle (SDLC), team coordination, and product design, rather than complex backend architecture.
