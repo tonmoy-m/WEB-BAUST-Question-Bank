@@ -1,0 +1,111 @@
+/* Global Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Fira code light", sans-serif;
+  background: linear-gradient(135deg, #004581, #081abd, #97cbdc, #dde8f0);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  font-size: 2.5em;
+  color: #dde8f0;
+  margin-bottom: 20px;
+}
+
+/* Navbar Styling */
+.centered-navbar {
+  background-color: rgba(0, 69, 129, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 800px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+form {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form label {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #dde8f0;
+}
+
+form select {
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  width: 80%;
+  font-size: 1.1em;
+  border: 2px solid #1e2b9a;
+  border-radius: 5px;
+  background-color: #08283f;
+  color: #1b1b3d;
+  outline: none;
+}
+
+form select:disabled {
+  background-color: #e0e0e0;
+  color: #a0a0a0;
+  border-color: #a0a0a0;
+}
+
+form select:hover {
+  background-color: #97cbdc;
+  border-color: #093d5d;
+}
+
+/* Go Button Styling */
+#goButton {
+  padding: 10px 20px;
+  background-color: #2baecb;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#goButton:hover {
+  background-color: #004581;
+}
+
+/* Footer Styling */
+footer {
+  background-color: rgba(0, 69, 129, 0.9);
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+footer p {
+  font-size: 1em;
+}

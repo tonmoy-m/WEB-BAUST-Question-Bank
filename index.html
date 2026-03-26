@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>BAUST Question Bank</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="/MyProject v1/image/Final Logo.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to the Question Bank</h1>
+    </header>
+    <nav class="centered-navbar">
+      <form id="selectionForm">
+        <label for="department">Department:</label>
+        <select
+          id="department"
+          name="department"
+          onchange="enableSelect('levelTerm')"
+        >
+          <option value="">Select Department</option>
+          <option value="CSE">CSE</option>
+          <option value="EEE">EEE</option>
+        </select>
+
+        <label for="levelTerm">Level-Term:</label>
+        <select
+          id="levelTerm"
+          name="levelTerm"
+          onchange="enableSelect('questionType')"
+          disabled
+        >
+          <option value="">Select Level-Term</option>
+          <option value="L1T1">Level-1 Term-I</option>
+          <option value="L1T2">Level-1 Term-II</option>
+          <option value="L2T1">Level-2 Term-I</option>
+          <option value="L2T2">Level-2 Term-II</option>
+          <option value="L3T1">Level-3 Term-I</option>
+          <option value="L3T2">Level-3 Term-II</option>
+          <option value="L4T1">Level-4 Term-I</option>
+          <option value="L4T2">Level-4 Term-II</option>
+        </select>
+
+        <label for="questionType">Question Type:</label>
+        <select id="questionType" name="questionType" disabled>
+          <option value="">Select Question Type</option>
+          <option value="CT">CT</option>
+          <option value="Mid">Mid</option>
+          <option value="Final">Final</option>
+        </select>
+
+        <button type="button" id="goButton" onclick="navigate()">Go</button>
+      </form>
+    </nav>
+
+    <footer>
+      <p>&copy; BQB 2024</p>
+    </footer>
+
+    <script>
+      function enableSelect(id) {
+        const select = document.getElementById(id);
+        if (select) {
+          select.disabled = false;
+        }
+      }
+
+      function navigate() {
+        const department = document.getElementById("department").value;
+        const levelTerm = document.getElementById("levelTerm").value;
+        const questionType = document.getElementById("questionType").value;
+
+        if (department === "CSE") {
+          let path = "";
+
+          // Paths for Level-1 Term-II
+          if (levelTerm === "L1T2" && questionType === "CT") {
+            path =
+              "https://drive.google.com/drive/folders/16GU-LgUFTKwIw1Fk59uYMCm4Qi0Yv7DM?usp=sharing";
+          } else if (levelTerm === "L1T2" && questionType === "Mid") {
+            path =
+              "https://drive.google.com/drive/folders/16Eb2erpwLyGE0fqEufl3LAMOvB-Qm8SN?usp=sharing";
+          } else if (levelTerm === "L1T2" && questionType === "Final") {
+            path =
+              "https://drive.google.com/drive/folders/16FBIAT0q_7Ddu966BqRVFLmSp5Dnitk9?usp=sharing";
+          }
+          // Paths for Level-2 Term-I
+          else if (levelTerm === "L2T1" && questionType === "CT") {
+            path =
+              "https://drive.google.com/drive/folders/16AiOTJAVfNnkvMFQX0TD58BXKk8ewCoj?usp=sharing";
+          } else if (levelTerm === "L2T1" && questionType === "Mid") {
+            path =
+              "https://drive.google.com/drive/folders/16-Ngn28f-_lptE6AbFqSlnSEU5zIuC3G?usp=sharing";
+          } else if (levelTerm === "L2T1" && questionType === "Final") {
+            path =
+              "https://drive.google.com/drive/folders/16885kpLySbYc1SL95E8h1bbb5cht9N_S?usp=sharing";
+          }
+
+          if (path) {
+            window.location.href = path;
+          } else {
+            alert("This combination does not have a specific path.");
+          }
+        } else {
+          alert("Please select the CSE department and the correct Level-Term.");
+        }
+      }
+    </script>
+  </body>
+</html>
